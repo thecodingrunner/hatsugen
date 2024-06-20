@@ -2,12 +2,12 @@ import connectToDB from '../../../../utils/database'
 import Audiobook from "@/models/audiobook";
 
 export const POST = async (request) => {
-  const { text, audioUrl, filepath, voiceType } = await request.json();
+  const { text, audioUrl, filepath, voiceType, thumbnailFilepath, thumbnailUrl } = await request.json();
   console.log(text, audioUrl, filepath, voiceType);
   try {
     connectToDB()
 
-    const newAudiobook = new Audiobook({ text, audioUrl, filepath, voiceType });
+    const newAudiobook = new Audiobook({ text, audioUrl, filepath, voiceType, thumbnailFilepath, thumbnailUrl });
 
     await newAudiobook.save();
 

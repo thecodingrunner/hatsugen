@@ -4,7 +4,7 @@ import { ProfileForm } from "@/components/Form"
 
 const page = () => {
   return (
-    <div className=''>
+    <div className="max-h-screen">
         <ProfileForm />
     </div>
   )

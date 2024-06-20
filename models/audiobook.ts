@@ -25,6 +25,12 @@ const AudiobookSchema = new Schema({
     type: String,
     required: [true, 'Filepath is required.'],
   },
+  thumbnailUrl: {
+    type: String,
+  },
+  thumbnailFilepath: {
+    type: String,
+  },
 });
 
 const Audiobook = models.Audiobook || model('Audiobook', AudiobookSchema);

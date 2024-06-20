@@ -1,10 +1,6 @@
-import path from "path";
-import fs from "fs";
 import OpenAI from "openai";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebaseConfig"; 
-import connectToDB from '../../utils/database'
-import Audiobook from "@/models/audiobook";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
