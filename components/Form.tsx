@@ -119,7 +119,7 @@ export function ProfileForm() {
 
     const fetchPosts = async (text: any) => {
       try {
-        const response = await fetch(`/api`, {
+        const response = await fetch(`/api/audio`, {
           method: "POST",
           body: JSON.stringify({ text, voiceType }),
         });
