@@ -35,6 +35,7 @@ import Image from "next/image";
 import { error } from "console";
 
 const formSchema = z.object({
+  title: z.string().min(1, "title is required"),
   voiceType: z.string().min(1, "voice is required"),
   text: z.string().min(1, "text is required"),
   thumbnailPrompt: z.string().min(1, "prompt is required"),
@@ -45,8 +46,11 @@ const voiceTypes = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"];
 export function ProfileForm() {
   const { toast } = useToast();
 
-  // Audiobook states
+  // Book states
+  const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+
+  // Audiobook states
   const [isGenerating, setIsGenerating] = useState(false);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [filepath, setFilepath] = useState("");
@@ -66,6 +70,7 @@ export function ProfileForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      title: "",
       text: "",
       thumbnailPrompt: "",
     },
@@ -76,7 +81,7 @@ export function ProfileForm() {
     try {
       const response = await fetch(`/api/audiobook/new`, {
         method: "POST",
-        body: JSON.stringify({ text, voiceType, audioUrl, filepath, thumbnailUrl, thumbnailFilepath }),
+        body: JSON.stringify({ title, text, voiceType, audioUrl, filepath, thumbnailUrl, thumbnailFilepath }),
       });
       if (response.ok) {
         toast({
@@ -245,6 +250,32 @@ export function ProfileForm() {
         console.log('test')
         onSubmit()
       }} className="space-y-8 pb-10">
+
+        {/* Title */}
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem>
+              <Label htmlFor="text" className="text-2xl">
+                Book Title
+              </Label>
+              <Input
+                id="text"
+                type="text"
+                {...field}
+                onChange={(e) => {
+                  field.onChange(e);
+                  setTitle(e.target.value);
+                }}
+                className="text-lg text-[#D9D9D9] border-[#1E1E1E] bg-[#1E1E1E]"
+              />
+              <FormDescription>Write the book title here.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <Select
           onValueChange={(e) => {
             console.log(e);
@@ -285,7 +316,7 @@ export function ProfileForm() {
                 }}
                 className="h-[25vh] text-lg text-[#D9D9D9] border-[#1E1E1E] bg-[#1E1E1E]"
               />
-              <FormDescription>Paste the book text here.</FormDescription>
+              <FormDescription>Write the book text here.</FormDescription>
               <FormMessage />
             </FormItem>
           )}

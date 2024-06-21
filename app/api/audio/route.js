@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { storage } from "../../firebaseConfig"; 
+import { storage } from "../../../firebaseConfig"; 
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
