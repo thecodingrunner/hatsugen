@@ -249,7 +249,7 @@ export function ProfileForm() {
         e.preventDefault()
         console.log('test')
         onSubmit()
-      }} className="space-y-8 pb-10">
+      }} className="space-y-8">
 
         {/* Title */}
         <FormField
@@ -401,7 +401,7 @@ export function ProfileForm() {
           )}
         </div>
 
-        <Button type="submit" variant="outline">
+        <Button type="submit" variant="outline" className="text-[#D9D9D9] bg-[#1E1E1E] border-[#1E1E1E]">
           Save Audiobook
         </Button>
       </form>

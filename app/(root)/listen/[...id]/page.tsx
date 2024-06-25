@@ -25,9 +25,18 @@ const page = ({ params }: { params: { id: string } }) => {
       }, [])
 
   return (
-    <div>
+    <div className='bg-white rounded-xl'>
         {audiobook && (
-            <AudioPlayer audioUrl={audiobook.audioUrl} thumbnailUrl={audiobook.thumbnailUrl} title={audiobook.title} />
+          <>
+            <div className='h-[84vh] overflow-y-auto p-10'>
+                <h1 className='text-4xl mb-4 text-center'>{audiobook.title}</h1>
+                <div className='flex justify-center my-10'>
+                    <img src={audiobook.thumbnailUrl} width={500} height={500} />
+                </div>
+                <p className='text-2xl pb-10'>{audiobook.text}</p>
+            </div>
+            <AudioPlayer audioUrl={audiobook.audioUrl} thumbnailUrl={audiobook.thumbnailUrl} title={audiobook.title} text={audiobook.text} />
+          </>
         )}
     </div>
   )

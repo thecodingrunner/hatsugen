@@ -23,16 +23,23 @@ const Home = () => {
   }, [])
 
   return (
-    <div className='mt-9 flex flex-col gap-9 max-h-screen'>
+    <div className='flex flex-col gap-9 max-h-screen bg-[#D9D9D9] p-6 rounded-xl overflow-y-auto'>
       <section className='flex flex-col gap-5'>
-        <h1 className='text-20 font-bold text-white-1'>Trending Podcasts</h1>
+        <h1 className='text-3xl font-bold text-white-1'>Your Audiobooks</h1>
         <div className="grid grid-cols-3 gap-10">
-          {audiobooks.map(({_id, thumbnailUrl, title}: Audiobook) => (
-            <div className='p-4 bg-[#1E1E1E] flex flex-col gap-2' key={_id}>
-              <img src={thumbnailUrl} width={300} height={300} alt='thumbnail' />
-              <Link href={`/listen/${_id}`} className='text-lg text-[#D9D9D9]'>{title}</Link>
+          {audiobooks && (
+            audiobooks.map(({_id, thumbnailUrl, title, text}: Audiobook) => (
+            <div className='bg-transparent flex flex-col gap-2' key={_id}>
+              <div className='rounded-lg overflow-hidden w-full h-full'>
+                <img src={thumbnailUrl} alt='thumbnail' className='object-cover' />
+              </div>
+              <Link href={`/listen/${_id}`} className='text-[#1E1E1E]'>
+                <h2 className='text-lg'>{title}</h2>
+                <p className='text-sm'>{text.slice(0,30)}...</p>
+              </Link>
             </div>
-          ))}
+          ))
+          )}
         </div>
       </section>
     </div>

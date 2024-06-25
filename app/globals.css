@@ -23,7 +23,7 @@ html {
     @apply sticky right-0 top-0 flex w-[310px] flex-col overflow-y-hidden border-none bg-[#1E1E1E] px-[30px] pt-8 max-xl:hidden;
   }
   .left_sidebar {
-    @apply sticky left-0 top-0 flex w-fit flex-col  justify-between border-none bg-[#1E1E1E] pt-8 text-white max-md:hidden lg:w-[270px] lg:pl-8;
+    @apply sticky left-0 top-0 flex w-fit flex-col rounded-xl justify-between border-none bg-[#1E1E1E] m-2 pt-8 text-white max-md:hidden lg:w-[300px] lg:pl-8;
   }
   .generate_thumbnail {
     @apply mt-[30px] flex w-full max-w-[520px] flex-col justify-between gap-2 rounded-lg border border-black bg-black px-2.5 py-2 md:flex-row md:gap-0;

@@ -1,11 +1,10 @@
-"use client"
-
-import { ProfileForm } from "@/components/Form"
+import React from 'react'
+import { PodcastForm } from '@/components/PodcastForm'
 
 const page = () => {
   return (
-    <div className="max-h-screen">
-        <ProfileForm />
+    <div>
+        <PodcastForm />
     </div>
   )
 }

@@ -2,18 +2,23 @@ export const sidebarLinks = [
   {
     imgURL: "/icons/home.svg",
     route: "/",
-    label: "Home",
+    label: "Audiobooks",
   },
-  {
-    imgURL: "/icons/discover.svg",
-    route: "/discover",
-    label: "Discover",
-  },
+  // {
+  //   imgURL: "/icons/discover.svg",
+  //   route: "/discover",
+  //   label: "Podcasts",
+  // },
   {
     imgURL: "/icons/microphone.svg",
-    route: "/create-podcast",
-    label: "Create Podcast",
+    route: "/create-audiobook",
+    label: "Create Audiobook",
   },
+  // {
+  //   imgURL: "/icons/microphone.svg",
+  //   route: "/create-podcast",
+  //   label: "Create Podcast",
+  // },
 ];
 
 export const voiceDetails = [
