@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Hatsugen Audiobook Generator</h1>
 
-## Getting Started
+<h2>Description:</h2>
+Text-to-Audiobook Converter: A Next.js app leveraging OpenAI's API to transform written content into high-quality audiobooks.
 
-First, run the development server:
+<h2>Project Purpose and Goal:</h2>
+This web application transforms text into audiobooks with a Spotify-like listening experience. Key features include:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. AI voice selection
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Text-to-speech conversion
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. AI-generated book covers
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Personal audiobook library
 
-## Learn More
+5. Seamless playback interface
 
-To learn more about Next.js, take a look at the following resources:
+6. User authentication (username/password and Google login)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Users can effortlessly create, store, and enjoy custom audiobooks, complete with AI-generated covers, all within a user-friendly interface.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h2>Webstack/Technologies used:</h2>
+<ul>
+  <li>NextJS</li>
+  <li>React</li>
+  <li>MongoDB</li>
+  <li>OpenAI API</li>
+  <li>TailwindCSS</li>
+  <li>Firebase</li>
+  <li>TypeScript</li>
+  <li>HTML</li>
+</ul>
 
-## Deploy on Vercel
+<h2>Webstack and Explanation:</h2>
+This robust application seamlessly combines modern web technologies with AI capabilities to deliver a comprehensive audiobook creation and management platform.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Stack: Next.js with TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. AI Integration: OpenAI API for audio and cover generation
+
+3. Database: MongoDB for user and book data storage
+
+4. Authentication: NextAuth for secure user management
+
+5. Features: Text-to-speech conversion, AI cover creation, user library
+
+<p></p>
+
+![hatsugen-markup](https://github.com/thecodingrunner/hatsugen/assets/22331070/0541854b-a6be-491f-bada-060cc1832ab2)
+![hatsugen-1](https://github.com/thecodingrunner/hatsugen/assets/22331070/b104c874-1524-4bdb-80b2-405ff1520543)
+![hatsugen-3](https://github.com/thecodingrunner/hatsugen/assets/22331070/99b7b2c5-08b1-430a-88fe-bdfd9f414738)
+![hatsugen-2](https://github.com/thecodingrunner/hatsugen/assets/22331070/23d379f7-e0c9-416f-b4a3-5414e0641dfe)
+![hatsugen-5](https://github.com/thecodingrunner/hatsugen/assets/22331070/10f088e9-2533-4224-8899-6e3824eb7059)
+![hatsugen-6](https://github.com/thecodingrunner/hatsugen/assets/22331070/840bf8c9-1702-44be-8625-11698e529c70)
